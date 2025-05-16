@@ -1,47 +1,79 @@
-<!-- Hero Section -->
-<section id="hero" class="section hero">
-  <div class="container">
-    <h1>Chào mừng đến với DeusCore</h1>
-    <p>Đội ngũ sinh viên vận hành như một agency thực thụ, đồng hành cùng SME.</p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="vi">
 
-<!-- About Section -->
-<section id="about" class="section about">
-  <div class="container">
-    <h2>Về DeusCore</h2>
-    <p>Chúng tôi là nhóm sinh viên trẻ, táo bạo, hoạt động như một agency để hỗ trợ các doanh nghiệp SME giải quyết bài toán thực tế.</p>
-  </div>
-</section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeusCore</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-<!-- Projects Section -->
-<section id="projects" class="section projects">
-  <div class="container">
-    <h2>Dự án tiêu biểu</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Dự án A</h3>
-        <p>Giải pháp marketing cho một quán cà phê SME tại Hà Nội.</p>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="DeusCore Logo" />
+        <span>DeusCore</span>
       </div>
-      <div class="project-card">
-        <h3>Dự án B</h3>
-        <p>Xây dựng lại mô hình bán hàng online cho một cửa hàng thời trang.</p>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#projects">Dự án</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+          <li><a href="#register" class="cta">Đăng ký</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Biến sinh viên thành chiến binh thực chiến</h1>
+      <p>DeusCore là nhóm sinh viên vận hành như một agency thực thụ – phục vụ SME, thu thập kinh nghiệm, phát triển hệ sinh thái tư duy.</p>
+      <a href="#register" class="cta-button">Tham gia ngay</a>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>Về DeusCore</h2>
+      <p>Chúng tôi tin rằng thực chiến là cách học nhanh nhất. DeusCore không lý thuyết suông – chỉ kết quả, chiến lược và hệ thống.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Dự án tiêu biểu</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <h3>Hệ thống hoá marketing cho SME</h3>
+          <p>Team DeusCore tái cấu trúc hệ thống marketing cho doanh nghiệp nhỏ, giúp tăng lead và chuyển đổi thực tế.</p>
+        </div>
+        <div class="project-item">
+          <h3>Research thị trường ngành nội thất</h3>
+          <p>Phân tích sâu hành vi khách hàng và xây hệ thống kênh bán hàng đa nền tảng cho doanh nghiệp địa phương.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section contact">
-  <div class="container">
-    <h2>Liên hệ với chúng tôi</h2>
-    <p>Gửi email về <a href="mailto:contact@deuscore.vn">contact@deuscore.vn</a> hoặc điền form đăng ký.</p>
-  </div>
-</section>
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Liên hệ với chúng tôi</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Họ và tên" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Tin nhắn của bạn"></textarea>
+        <button type="submit">Gửi</button>
+      </form>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>© 2025 DeusCore. All rights reserved.</p>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 DeusCore. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
