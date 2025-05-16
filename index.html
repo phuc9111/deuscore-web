@@ -1,83 +1,50 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeusCore | Digital Operator</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-    }
-    #form-status {
-      font-style: italic;
-      margin-top: 1rem;
-    }
-  </style>
-</head>
-<body class="bg-black text-white">
+<form id="deusForm">
+  <label>Họ tên:</label>
+  <input type="text" name="ten" required /><br><br>
 
-  <!-- Header -->
-  <header class="flex justify-between items-center px-8 py-6 border-b border-gray-700 sticky top-0 z-50 bg-black">
-    <h1 class="text-2xl font-bold">DeusCore</h1>
-    <nav class="space-x-6 text-gray-300">
-      <a href="#" class="hover:text-white transition">Giới thiệu</a>
-      <a href="#" class="hover:text-white transition">Dự án</a>
-      <a href="#contact" class="hover:text-white transition">Liên hệ</a>
-    </nav>
-  </header>
+  <label>Email:</label>
+  <input type="email" name="email" required /><br><br>
 
-  <!-- Hero Section -->
-  <section class="px-8 py-12">
-    <div class="hero">
-      <h2 class="text-xl md:text-2xl font-semibold mb-4">
-        Nếu mà các bạn đọc được dòng chữ này thì chắc hẳn nền tảng này OKELA rồi đấy hahaha
-      </h2>
-      <p class="text-gray-300">
-        Hành động và tạo ra kết quả. Đây là nơi vận hành những dự án thật, khách hàng thật, bài học thật.
-      </p>
-    </div>
-  </section>
+  <label>Số điện thoại:</label>
+  <input type="text" name="sdt" required /><br><br>
 
-  <!-- Contact Form Section -->
-  <section id="contact" class="px-8 py-12 bg-white text-black">
-    <h2 class="text-2xl font-bold mb-2">Liên hệ DeusCore</h2>
-    <p class="mb-6">Để lại thông tin – chúng tôi sẽ chủ động kết nối và hỗ trợ bạn ngay.</p>
-    <form id="contact-form" class="space-y-4 max-w-xl">
-      <input type="text" name="name" placeholder="Họ và tên" required class="w-full border border-gray-300 p-2 rounded">
-      <input type="email" name="email" placeholder="Email" required class="w-full border border-gray-300 p-2 rounded">
-      <input type="tel" name="phone" placeholder="Số điện thoại" required class="w-full border border-gray-300 p-2 rounded">
-      <textarea name="message" rows="5" placeholder="Bạn đang cần gì từ DeusCore?" required class="w-full border border-gray-300 p-2 rounded"></textarea>
-      <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">Gửi ngay</button>
-      <p id="form-status" class="text-green-600 hidden"></p>
-    </form>
-  </section>
+  <label>Nội dung:</label>
+  <textarea name="message" required></textarea><br><br>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 border-t border-gray-700 text-gray-500 text-sm">
-    © 2025 DeusCore. Built by sinh viên, dành cho chiến thần.
-  </footer>
+  <button type="submit">Gửi đăng ký</button>
+</form>
 
-  <!-- Script xử lý Google Form -->
-  <script>
-    const scriptURL = https://script.google.com/macros/s/AKfycby5R49tc4Q5tT_B7c3N3RATEKJY9p-m1Y22UlJl_MO8yuHImFQU0gos_DaEgFkx5yt-/exec;
-    const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
+<p id="result"></p>
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      status.classList.remove("hidden");
-      status.textContent = 'Đang gửi...';
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          status.textContent = 'Đã gửi thành công! Chúng tôi sẽ liên hệ sớm.';
-          form.reset();
-        })
-        .catch(error => {
-          status.textContent = 'Gửi thất bại. Vui lòng thử lại sau.';
-        });
+<script>
+  const form = document.getElementById('deusForm');
+  const result = document.getElementById('result');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const object = {};
+    formData.forEach((value, key) => {
+      object[key] = value;
     });
-  </script>
+    const json = JSON.stringify(object);
 
-</body>
-</html>
+    fetch('https://script.google.com/macros/s/AKfycbwt2tytQG5IybqtyTMGE-1f9aJ25Eg_ZuilFxujVOW3EfmySLLjnBkyg-iSKH956P1T/exec', {
+      method: 'POST',
+      body: json,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.text())
+    .then(text => {
+      result.innerText = '✅ Gửi thành công!';
+      form.reset();
+    })
+    .catch(err => {
+      result.innerText = '❌ Lỗi khi gửi. Vui lòng thử lại.';
+      console.error(err);
+    });
+  });
+</script>
