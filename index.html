@@ -1,100 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DeusCore | Digital Operator</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<html lang="vi">
 
-      body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #0f0f0f;
-        color: #fff;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeusCore | Digital Operator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/10691/10691851.png" type="image/png">
+</head>
 
-      header {
-        padding: 20px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #161616;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      }
+<body class="bg-black text-white font-sans">
+  <header class="flex justify-between items-center px-8 py-6 border-b border-gray-700 sticky top-0 bg-black z-50">
+    <h1 class="text-2xl font-bold">DeusCore</h1>
+    <nav class="space-x-6 text-gray-300">
+      <a href="#" class="hover:text-white transition">Giới thiệu</a>
+      <a href="#" class="hover:text-white transition">Dự án</a>
+      <a href="#" class="hover:text-white transition">Liên hệ</a>
+    </nav>
+  </header>
 
-      header h1 {
-        font-size: 1.8rem;
-        letter-spacing: 1px;
-        font-weight: 600;
-      }
-
-      nav a {
-        margin-left: 20px;
-        color: #ccc;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      nav a:hover {
-        color: #fff;
-      }
-
-      .hero {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 60px 20px;
-      }
-
-      .hero h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-        max-width: 600px;
-        line-height: 1.6;
-        color: #aaa;
-      }
-
-      footer {
-        padding: 20px;
-        text-align: center;
-        background-color: #161616;
-        color: #666;
-        font-size: 0.9rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>DeusCore</h1>
-      <nav>
-        <a href="#">Giới thiệu</a>
-        <a href="#">Dự án</a>
-        <a href="#">Liên hệ</a>
-      </nav>
-    </header>
-
-    <div class="hero">
-      <h2>Nếu mà các bạn đọc được dòng chữ này thì chắc hẳn nền tảng này OKELA rồi đấy hahaha</h2>
-      <p>Hành động và tạo ra kết quả. Đây là nơi vận hành những dự án thật, khách hàng thật, bài học thật.</p>
+  <section class="text-center py-24 px-6">
+    <h2 class="text-4xl font-bold mb-4">Hệ sinh thái thực chiến của những người hành động</h2>
+    <p class="max-w-2xl mx-auto text-gray-400 leading-relaxed">
+      Chúng tôi không nói nhiều. Chúng tôi hành động và tạo ra kết quả.<br>
+      Đây là nơi vận hành những dự án thật, khách hàng thật, bài học thật<br>
+      cho những người muốn bứt phá.
+    </p>
+    <div class="mt-10">
+      <a href="#" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition">Tham gia DeusCore</a>
     </div>
+  </section>
 
-    <footer>
-      © 2025 DeusCore. Built by anh Phúc chiến thần.
-    </footer>
-  </body>
+  <section class="px-6 py-16 bg-gray-900">
+    <h3 class="text-2xl font-bold mb-8 text-center">Dự án tiêu biểu</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">Brand X Growth</h4>
+        <p class="text-gray-400">Tăng trưởng doanh số 200% cho startup mỹ phẩm trong 2 tháng thông qua chiến dịch digital chiến lược.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">Local Hero Boost</h4>
+        <p class="text-gray-400">Tái định vị thương hiệu + xây funnel chuyển đổi cho một SME ngành F&B tại địa phương.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">EduHack Sprint</h4>
+        <p class="text-gray-400">Thiết kế và test MVP nền tảng học online cho tổ chức giáo dục trong vòng 10 ngày.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 border-t border-gray-700 text-gray-500 text-sm">
+    © 2025 DeusCore. Built by sinh viên, dành cho chiến thần.
+  </footer>
+</body>
+
 </html>
