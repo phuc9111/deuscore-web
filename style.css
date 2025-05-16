@@ -1,115 +1,87 @@
-/* Reset cơ bản */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="vi">
 
-body {
-  font-family: 'Inter', sans-serif;
-  color: #111;
-  background-color: #fff;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeusCore</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-/* Header */
-.main-header {
-  position: sticky;
-  top: 0;
-  background: white;
-  border-bottom: 1px solid #eee;
-  z-index: 1000;
-  padding: 10px 0;
-}
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="DeusCore Logo" />
+        <span>DeusCore</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#projects">Dự án</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+          <li><a href="#register" class="cta">Đăng ký</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-/* Container cho layout */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Biến sinh viên thành chiến binh thực chiến</h1>
+      <p>DeusCore là nhóm sinh viên vận hành như một agency thực thụ – phục vụ SME, thu thập kinh nghiệm, phát triển hệ sinh thái tư duy.</p>
+      <a href="#register" class="cta-button hero-button">Tham gia ngay</a>
+    </div>
+  </section>
 
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>Về DeusCore</h2>
+      <p>Chúng tôi tin rằng thực chiến là cách học nhanh nhất. DeusCore không lý thuyết suông – chỉ kết quả, chiến lược và hệ thống.</p>
+    </div>
+  </section>
 
-.logo img {
-  height: 40px;
-}
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Dự án tiêu biểu</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <img src="assets/marketing-icon.png" alt="Marketing Icon" class="project-icon" />
+          <h3>Hệ thống hoá marketing cho SME</h3>
+          <p>Team DeusCore tái cấu trúc hệ thống marketing cho doanh nghiệp nhỏ, giúp tăng lead và chuyển đổi thực tế.</p>
+        </div>
+        <div class="project-item">
+          <img src="assets/interior-icon.png" alt="Interior Icon" class="project-icon" />
+          <h3>Research thị trường ngành nội thất</h3>
+          <p>Phân tích sâu hành vi khách hàng và xây hệ thống kênh bán hàng đa nền tảng cho doanh nghiệp địa phương.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Menu chính */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Liên hệ với chúng tôi</h2>
+      <form class="contact-form">
+        <label for="name">Họ và tên:</label>
+        <input id="name" type="text" placeholder="Họ và tên" required />
 
-.main-nav a {
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-  transition: color 0.2s;
-}
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Email" required />
 
-.main-nav a:hover {
-  color: #555;
-}
+        <label for="message">Tin nhắn:</label>
+        <textarea id="message" placeholder="Tin nhắn của bạn"></textarea>
 
-/* Nút CTA */
-.main-nav .cta {
-  background: #000;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 6px;
-}
-.main-header {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
-}
+        <button type="submit">Gửi</button>
+      </form>
+    </div>
+  </section>
 
-.main-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 DeusCore. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
 
-.logo img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-  color: #000;
-}
-
-.cta {
-  background-color: #000;
-  color: #fff !important;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-}
+</html>
