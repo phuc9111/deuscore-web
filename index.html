@@ -19,33 +19,9 @@
     </nav>
   </header>
 
-  <section class="text-center py-24 px-6">
-    <h2 class="text-4xl font-bold mb-4">Hệ sinh thái thực chiến của những người hành động</h2>
-    <p class="max-w-2xl mx-auto text-gray-400 leading-relaxed">
-      Chúng tôi không nói nhiều. Chúng tôi hành động và tạo ra kết quả.<br>
-      Đây là nơi vận hành những dự án thật, khách hàng thật, bài học thật<br>
-      cho những người muốn bứt phá.
-    </p>
-    <div class="mt-10">
-      <a href="#" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition">Tham gia DeusCore</a>
-    </div>
-  </section>
-
-  <section class="px-6 py-16 bg-gray-900">
-    <h3 class="text-2xl font-bold mb-8 text-center">Dự án tiêu biểu</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-        <h4 class="text-xl font-semibold mb-2">Brand X Growth</h4>
-        <p class="text-gray-400">Tăng trưởng doanh số 200% cho startup mỹ phẩm trong 2 tháng thông qua chiến dịch digital chiến lược.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-        <h4 class="text-xl font-semibold mb-2">Local Hero Boost</h4>
-        <p class="text-gray-400">Tái định vị thương hiệu + xây funnel chuyển đổi cho một SME ngành F&B tại địa phương.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-        <h4 class="text-xl font-semibold mb-2">EduHack Sprint</h4>
-        <p class="text-gray-400">Thiết kế và test MVP nền tảng học online cho tổ chức giáo dục trong vòng 10 ngày.</p>
-      </div>
+    <div class="hero">
+      <h2>Nếu mà các bạn đọc được dòng chữ này thì chắc hẳn nền tảng này OKELA rồi đấy hahaha</h2>
+      <p>Hành động và tạo ra kết quả. Đây là nơi vận hành những dự án thật, khách hàng thật, bài học thật.</p>
     </div>
   </section>
 
@@ -53,5 +29,78 @@
     © 2025 DeusCore. Built by sinh viên, dành cho chiến thần.
   </footer>
 </body>
+</html>
+  </footer>
 
+  <!-- Dán form liên hệ ở đây -->
+  <section id="contact">
+    <h2>Liên hệ DeusCore</h2>
+    <p>Để lại thông tin – chúng tôi sẽ chủ động kết nối và hỗ trợ bạn ngay.</p>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Họ và tên" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Số điện thoại" required>
+      <textarea name="message" rows="5" placeholder="Bạn đang cần gì từ DeusCore?" required></textarea>
+      <button type="submit">Gửi ngay</button>
+      <p id="form-status" style="display:none; margin-top:1rem;"></p>
+    </form>
+  </section>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxvBd1gbUMotK4ZYUxkVaqSD9STwopU8GxVwve7Nou0MXBbLUM0-FCQ5YbzTfFoh1o/exec';
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      status.style.display = 'block';
+      status.textContent = 'Đang gửi...';
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          status.textContent = 'Đã gửi thành công! Chúng tôi sẽ liên hệ sớm.';
+          form.reset();
+        })
+        .catch(error => {
+          status.textContent = 'Gửi thất bại. Vui lòng thử lại sau.';
+        });
+    });
+  </script>
+
+  <style>
+    #contact {
+      padding: 2rem;
+      background-color: #f4f4f4;
+      margin-top: 2rem;
+    }
+    #contact h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    #contact p {
+      font-size: 1rem;
+      color: #333;
+    }
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    #contact button {
+      background-color: #000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #form-status {
+      font-style: italic;
+      color: #007700;
+    }
+  </style>
+
+</body>
 </html>
