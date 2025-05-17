@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang chủ | DeusCore - Kiến Tạo Giải Pháp Marketing</title>
+  <meta name="description" content="DeusCore Agency – Mang đến giải pháp marketing đột phá, đồng hành cùng sự thành công của doanh nghiệp bạn." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Trang chủ | DeusCore - Kiến Tạo Giải Pháp Marketing" />
+  <meta property="og:description" content="DeusCore Agency – Mang đến giải pháp marketing đột phá, đồng hành cùng sự thành công của doanh nghiệp bạn." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://deuscore.com/" />
+  <meta property="og:image" content="https://deuscore.com/Assets" /> 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trang chủ | DeusCore - Kiến Tạo Giải Pháp Marketing" />
+  <meta name="twitter:description" content="DeusCore Agency – Mang đến giải pháp marketing đột phá." />
+  <meta name="twitter:image" content="https://deuscore.com/Assets/Images/anh-chinh-giua.jpg" />
+  <link rel="canonical" href="https://deuscore.com/" />
+  <link rel="icon" href="Assets/Icon/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .image-grid-container:hover .image-wrapper:not(:hover) img {
+        transform: scale(0.95);
+        opacity: 0.6;
+    }
+    .image-wrapper img {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .image-wrapper:hover img {
+        transform: scale(1.05);
+        opacity: 1;
+        z-index: 10; /* Đảm bảo ảnh được hover nằm trên */
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="shadow-sm">
+    <nav class="container mx-auto py-4 px-6 flex justify-between items-center">
+      <a href="index.html" class="text-purple-600 font-bold text-xl">DeusCore</a>
+      <div class="space-x-6">
+        <a href="Page/about.html" class="hover:text-purple-600">Về chúng tôi</a>
+        <a href="Page/services.html" class="hover:text-purple-600">Dịch vụ</a>
+        <a href="Page/contact.html" class="hover:text-purple-600">Liên hệ</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-semibold text-purple-700">
+        Kiến Tạo Giải Pháp Marketing Đột Phá - Nâng Tầm Doanh Nghiệp Việt
+      </h1>
+    </div>
+  </section>
+
+  <section class="pb-12 md:pb-16">
+    <div class="container mx-auto px-4">
+      <div class="image-grid-container grid grid-cols-1 md:grid-cols-10 gap-2 md:gap-4 items-center">
+        <div class="image-wrapper md:col-span-3 h-64 md:h-96 overflow-hidden rounded-lg">
+          <img src="Assets/Images/anh-phia-ben-trai.webp" alt="Hình ảnh minh họa marketing 1" class="w-full h-full object-cover">
+        </div>
+        <div class="image-wrapper md:col-span-4 h-72 md:h-[38rem] overflow-hidden rounded-lg relative"> 
+          <img src="Assets/Images/anh-o-chinh-giua.jpg" alt="Hình ảnh marketing trung tâm" class="w-full h-full object-cover">
+        </div>
+        <div class="image-wrapper md:col-span-3 h-64 md:h-96 overflow-hidden rounded-lg">
+          <img src="Assets/Images/anh-phia-ben-phai.jpg" alt="Hình ảnh minh họa marketing 2" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-10 text-sm border-t mt-12 md:mt-16">
+    &copy; 2025 DeusCore. Bảo lưu mọi quyền.
+    {/* Thêm các liên kết footer nếu cần, ví dụ: */}
+    <div class="mt-4">
+        <a href="Page/privacy-policy.html" class="text-gray-600 hover:text-purple-600 mx-2">Chính sách bảo mật</a>
+        <span class="text-gray-400">|</span>
+        <a href="Page/terms.html" class="text-gray-600 hover:text-purple-600 mx-2">Điều khoản dịch vụ</a>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // if (typeof AOS !== 'undefined') { // Kiểm tra nếu AOS tồn tại
+    //   AOS.init(); // Chỉ init nếu cần thiết cho các trang khác
+    // }
+  </script>
+</body>
+</html>
