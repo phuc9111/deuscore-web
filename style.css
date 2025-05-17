@@ -111,21 +111,20 @@
 }
 .logo-row {
   display: flex;
-  justify-content: center;
-  gap: 40px; /* chỉnh khoảng cách giữa các ảnh */
-  margin: 50px 0;
-  flex-wrap: wrap; /* Để ảnh không vỡ trên mobile */
+  justify-content: space-between; /* hoặc space-around/space-evenly tùy khẩu vị */
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .logo-row img {
-  width: 150px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  width: 30%; /* hoặc cụ thể như 200px nếu muốn cứng */
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 .logo-row img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* hiệu ứng nổi nhẹ */
+  transform: scale(1.05);
 }
 
 </html>
